@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.api.SistemaSkillAPI.config.JWTUtil;
 import br.com.api.SistemaSkillAPI.dto.LoginDTO;
 import br.com.api.SistemaSkillAPI.dto.LoginRespostaDTO;
@@ -41,7 +40,7 @@ public class UsuarioController {
 	@GetMapping("/listaSkill/{id}")
 	public List<UsuarioSkill> listaSkill(@PathVariable Integer id) {
 		System.out.println("algo");
-		System.out.println(id);
+//		System.out.println(id);
 		return usuarioService.listaSkill(id);
 	}
 

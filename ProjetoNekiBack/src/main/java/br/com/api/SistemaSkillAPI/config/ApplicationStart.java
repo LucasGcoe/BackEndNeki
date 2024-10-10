@@ -43,7 +43,7 @@ public class ApplicationStart {
 			skillService.salvar(novoSkill);
 			
 			novoSkill.setNome("C#");
-			novoSkill.setImagem("https://growiz.com.br/wp-content/uploads/2020/08/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-5b899192d7c600.1628571115357423548838.png");
+			novoSkill.setImagem("https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png");
 			novoSkill.setDescricao("Tipagem forte e alto desempenho");
 			skillService.salvar(novoSkill);
 			

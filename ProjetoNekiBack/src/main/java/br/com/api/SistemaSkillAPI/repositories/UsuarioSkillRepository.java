@@ -10,9 +10,7 @@ import org.springframework.stereotype.Repository;
 import br.com.api.SistemaSkillAPI.entities.UsuarioSkill;
 
 @Repository
-public interface UsuarioSkillRepository extends JpaRepository<UsuarioSkill, Integer> {
-
-	@Query(value = "select * from usuario_skill where usuario_id = :id", nativeQuery = true)
-	public List<UsuarioSkill> findByusuario(@Param("id") Integer id);
-
-}
+	public interface UsuarioSkillRepository extends JpaRepository<UsuarioSkill, Integer> {
+	    @Query(value = "select * from usuario_skill where usuario_id = :id ORDER BY nivel ", nativeQuery = true)
+	    public List<UsuarioSkill> findByusuario(@Param("id") Integer id);
+	}

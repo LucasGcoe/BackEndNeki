@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.api.SistemaSkillAPI.dto.PagesDTO;
 import br.com.api.SistemaSkillAPI.dto.UsuarioRequisicaoDTO;
 import br.com.api.SistemaSkillAPI.dto.UsuarioRespostaDTO;
 import br.com.api.SistemaSkillAPI.entities.Usuario;
@@ -62,11 +63,11 @@ public class UsuarioService {
 	}
 
 	public List<UsuarioSkill> listaSkill(Integer id) {
+		List<UsuarioSkill> ListaCompleta = usuarioSkillRepository.findByusuario(id);
+//		Integer numero=page.getValue();
+//		List<UsuarioSkill> SubLista = ListaCompleta.subList((page - 1) * 3, ((page) * 3) );
 
-//		List<UsuarioSkill> list = usuarioSkillRepository.findByusuario(id).map(List::of)
-//				.orElseGet(Collections::emptyList);
-
-		return usuarioSkillRepository.findByusuario(id);
+		return ListaCompleta;
 	}
 
 }
